@@ -1,0 +1,13 @@
+package cg.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class LoginController {
+	public ModelAndView login() {
+		System.out.println("Login method called..");
+		ModelAndView mav = new ModelAndView();
+		
+	}
+}

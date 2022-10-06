@@ -1,0 +1,39 @@
+package com.cg.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class LoginController {
+	
+	@RequestMapping("/userlogin.htm")
+	public ModelAndView login(@RequestParam("userName") String userName) {
+		ModelAndView mav = new ModelAndView();
+		
+		if (userName.equals("Albin")) {
+			System.out.println("Login method called..");
+			String msg = "Hi "+ userName + "! Have a wonderful evening :)";
+			mav.addObject("MSG", msg);
+			mav.setViewName("welcome.jsp");	
+		}
+		else {
+			mav.addObject("MSG", "Invalid USER");
+			mav.setViewName("login.jsp");
+		}
+		return mav;
+	}
+	
+	@RequestMapping("/calculate.htm")
+	public ModelAndView login(@RequestParam("fno") int fno, @RequestParam("sno") int sno) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("ADD", fno+sno);
+		mav.addObject("SUB", fno-sno);
+		mav.addObject("DIV", fno/sno);
+		mav.addObject("MUL", fno*sno);
+		mav.setViewName("CalcIndex.jsp");	
+		
+		return mav;
+	}
+}

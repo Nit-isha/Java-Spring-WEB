@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Calculator</h1>
+		<form action="calculate.htm">
+			First Number: <input type="number" name="fno">
+			<br>
+			Second Number: <input type="number" name="sno">
+			<br>
+			<button type="submit">ADD</button>
+		</form>
+		<br>
+		<br>
+		Result
+		<br>
+		--------------
+		<br>
+		ADD : ${ ADD }
+		<br>
+		SUB : ${ SUB }
+		<br>
+		DIV : ${ DIV }
+		<br>
+		MUL : ${ MUL }
+	</body>
+</html>
