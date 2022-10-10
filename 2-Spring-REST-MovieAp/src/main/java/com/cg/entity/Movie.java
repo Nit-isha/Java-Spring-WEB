@@ -1,11 +1,19 @@
 package com.cg.entity;
 
+import java.util.List;
+
+//@XmlRootElement
 public class Movie {
 	
 	private String movieCode;
 	private String movieName;
 	private String language;
 	private String genre;
+	
+	private List<Review> reviews;
+	public Movie() {
+		
+	}
 	
 	public Movie(String movieCode, String movieName, String language, String genre) {
 		super();
@@ -38,5 +46,12 @@ public class Movie {
 	}
 	public void setGenre(String genre) {
 		this.genre = genre;
+	}
+	public List<Review> getReviews() {
+		return reviews;
+	}
+	
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
 	}
 }
